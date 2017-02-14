@@ -1,7 +1,7 @@
 /*==================================================================
 Name: WebSlides
 Version: Pro (trackpad gestures and keyboard shortcuts).
-Description: HTML presentations made easy. 
+Description: HTML presentations made easy.
 URL: https://github.com/jlantunez/WebSlides
 Thanks @LuisSacristan for your help :)
 -
@@ -35,7 +35,7 @@ jQuery(document).ready(function($){
           $firstSlide = $slides.first(),
           $lastSlide = $slides.last(),
           $auxSlide = null;
-          
+
       var total = $slides.length;
 
       var labels = {
@@ -96,7 +96,7 @@ jQuery(document).ready(function($){
           $slideshow.data('moving', true);
           jQuery('html').css({overflow: 'hidden'});
           var nextSlide;
-          
+
           nextSlide = $currentSlide.next();
           slidePointer.current = ((slidePointer.current+1)%total);
           if (slidePointer.current == 0) slidePointer.current = total;
@@ -110,7 +110,7 @@ jQuery(document).ready(function($){
               $currentSlide.hide().removeClass(ID.current);
               $currentSlide.siblings('.slide').last().after($currentSlide);
               $currentSlide = nextSlide;
-              
+
               // update counter
               updateCounter();
 
@@ -366,7 +366,7 @@ jQuery(document).ready(function($){
       })
 
     });
-   
+
     // Prototype better, faster. To show the grid/baseline.png, press Enter on keyboard
     $(document).keypress(function(e) {
     if(e.which == 13) {
